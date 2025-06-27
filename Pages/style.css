@@ -1,21 +1,103 @@
 header {
-  background-color: #333;
+  background-color: #222;
   color: white;
-  padding: 20px;
-  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
-nav ul {
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 60px;
+  background-image: url('frente.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.logo-cabecalho {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 48px;
+  height: auto;
+  margin-right: 12px;
+}
+
+.cabecalho {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-nav li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav a {
+.menu li a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.menu li a:hover {
+  color: #ffd600;
+}
+
+main{
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: calc(100vh - 60px);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.4; 
+}
+
+img{
+  max-width: 350px;
+  height: auto;
+}
+
+.midias{
+  display: flex;
+  gap:32px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.midias imagem,video-container {
+  flex: 1 1 350px;
+  max-width: 500px;
+} 
+
+.midias img{
+  max-width: 100%;
+  height: auto; 
+  display: block; 
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  height:0; /* Aspect ratio 16:9 */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 75%;
+  border: 0;
 }
